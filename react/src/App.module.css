@@ -1,0 +1,33 @@
+.root {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    padding: 3rem;
+    border: 1px dashed black;
+    margin: 1rem;
+    flex: 1;
+}
+
+.errorMsg {
+    color: red;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+span {
+    font-size: 2rem;
+    color: black;
+    text-decoration: underline;
+}
+
+.generateButton {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+p {
+    font-size: 3rem;
+    font-weight: bold;
+}

@@ -1,0 +1,26 @@
+version: "3"
+services:
+  react:
+    build: ./react
+    container_name: react_container
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    networks:
+      - random-number-app
+    volumes:
+      - ./react:/app
+      - /app/node_modules
+  nodejs_service:
+    build: ./nodejs_service
+    container_name: nodejs_service_container
+    ports:
+      - "6002:6002"
+    networks:
+      - random-number-app
+    volumes:
+      - ./nodejs_service:/app
+      - /app/node_modules
+networks:
+  random-number-app:
+    driver: bridge
